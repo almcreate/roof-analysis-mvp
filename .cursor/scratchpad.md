@@ -28,17 +28,17 @@ The goal is to create a Vercel-compatible Next.js + React web app that allows us
 # Project Status Board
 - [x] 1. Set up Next.js project structure
 - [x] 2. Implement image upload and preview UI
-- [ ] 3. Client-side validation for image uploads
-- [ ] 4. Create `/api/analyze` backend route
+- [x] 3. Client-side validation for image uploads
+- [x] 4. Create `/api/analyze` backend route
 - [ ] 5. Integrate with OpenAI GPT-4 Vision API
 - [ ] 6. Display analysis results to the user
 - [ ] 7. Testing and Vercel compatibility check
 
 # Current Status / Progress Tracking
-- Task 2 complete: Image upload and preview UI implemented with drag-and-drop, copy/paste, and file selection. User can preview and remove images before submission. Ready to proceed to client-side validation for image uploads.
+- Task 4 complete: Frontend is connected to backend `/api/analyze` route. User can upload images and see a user-friendly confirmation. Ready to proceed to OpenAI GPT-4 Vision API integration in the backend.
 
 # Executor's Feedback or Assistance Requests
-- Proceeding to implement client-side validation for image uploads (max 10 images, only image files).
+- Proceeding to integrate OpenAI GPT-4 Vision API in the `/api/analyze` backend route.
 
 # Lessons
 - None yet. Will be updated as implementation progresses. 
