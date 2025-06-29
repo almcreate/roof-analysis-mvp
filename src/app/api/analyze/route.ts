@@ -30,8 +30,8 @@ export async function POST(req: NextRequest) {
   if (images.length === 0) {
     return NextResponse.json({ error: "No images uploaded." }, { status: 400 });
   }
-  if (images.length > 10) {
-    return NextResponse.json({ error: "Maximum 10 images allowed." }, { status: 400 });
+  if (images.length > 5) {
+    return NextResponse.json({ error: "Maximum 5 images allowed." }, { status: 400 });
   }
 
   // Analyze each image sequentially

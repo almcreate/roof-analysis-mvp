@@ -369,6 +369,14 @@ a.secondary {
   text-align: center;
 }
 
+.loadingNote {
+  color: #888;
+  font-size: 0.95rem;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 8px;
+}
+
 .addressSection {
   width: 100%;
   margin-bottom: 32px;
@@ -408,4 +416,29 @@ a.secondary {
   margin-bottom: 0;
   margin-left: 2px;
   font-weight: 400;
+}
+
+.ctaButton {
+  display: inline-block;
+  background: #5B30CC;
+  color: #ffffff;
+  padding: 16px 32px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+  border: 2px solid #5B30CC;
+  box-shadow: 0 4px 12px rgba(91, 48, 204, 0.3);
+}
+
+.ctaButton:hover {
+  background: #4a28a8;
+  border-color: #4a28a8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(91, 48, 204, 0.4);
+}
+
+.ctaButton:active {
+  transform: translateY(0);
 }

@@ -3,7 +3,7 @@ import React, { useRef, useState, useCallback } from "react";
 import Image from "next/image";
 import styles from "./page.module.css";
 
-const MAX_IMAGES = 10;
+const MAX_IMAGES = 5;
 
 export default function Home() {
   const [images, setImages] = useState<File[]>([]);
@@ -74,13 +74,15 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <header className={styles.header}>
-        <Image
-          src="/roofer-logo.png"
-          alt="roofer.com logo"
-          width={180}
-          height={40}
-          priority
-        />
+        <a href="https://roofer.com" target="_blank" rel="noopener noreferrer">
+          <Image
+            src="/roofer-logo.png"
+            alt="roofer.com logo"
+            width={180}
+            height={40}
+            priority
+          />
+        </a>
       </header>
       <main className={styles.mainCard}>
         <h1 className={styles.title}>Roofer AI</h1>
@@ -121,7 +123,7 @@ export default function Home() {
           <span>
             {images.length < MAX_IMAGES
               ? "Click to select images"
-              : "Maximum 10 images selected"}
+              : "Maximum 5 images selected"}
           </span>
         </div>
         {images.length > 0 && (
@@ -171,6 +173,7 @@ export default function Home() {
           <div className={styles.loadingContainer}>
             <div className={styles.loadingSpinner}></div>
             <div className={styles.loadingText}>Analyzing your roof images…</div>
+            <div className={styles.loadingNote}>This may take up to 1-2 minutes. Please do not close this tab.</div>
           </div>
         )}
         {response && response.summary && !loading && (
@@ -188,6 +191,16 @@ export default function Home() {
               <div style={{ whiteSpace: "pre-wrap", lineHeight: "1.6" }}>
                 {response.summary}
               </div>
+            </div>
+            <div style={{ marginTop: 24, textAlign: "center" }}>
+              <a
+                href="https://roofer.com/#free"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.ctaButton}
+              >
+                Book Your Free Roof Inspection
+              </a>
             </div>
           </div>
         )}
